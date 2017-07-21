@@ -12,7 +12,7 @@
               'is-plain': plain
             }
           ]">
-    1111
+    111
   </button>
 </template> 
 
@@ -37,6 +37,9 @@ export default {
 }
 </script>
 
+<style lang="less">
+  @import '../../../theme/button.less';
+</style>
 
 
 

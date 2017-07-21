@@ -1,12 +1,13 @@
 <template>
   <div class="all">
-      <div class="header">
+      <div class="views-header">
         <h1>Vue Element Plugin</h1>
       </div>
-      <div class="nav">
+      <div class="views-nav">
          <router-link to="/button">Button</router-link>
+         <router-link to="/icon">Icon</router-link>
       </div>
-      <div class="content">   
+      <div class="views-content">   
         <router-view></router-view> 
       </div>
   </div>    
@@ -19,11 +20,15 @@ export default {
 </script>
 
 <style>
-  .header{
+  .views-header{
     padding:10px;
   }
-  .nav {
+  .views-nav {
     padding: 50px;
+  }
+
+  .views-nav a {
+    margin-left: 10px;
   }
 </style>
 
