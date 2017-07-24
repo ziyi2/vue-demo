@@ -9,30 +9,83 @@
 }
 
 [class^="el-icon-"], [class*=" el-icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font: normal normal normal 14px/1 font-awesome-icons;
   text-transform: none;
-  line-height: 1;
   vertical-align: baseline;
   display: inline-block;
   font-size: inherit;
   text-rendering: auto;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.el-icon-lg {
+/* size */
+.el-icon--lg {
   font-size: 1.33333333em;
   line-height: 0.75em;
   vertical-align: -15%;
 }
 
+.el-icon--2x {
+  font-size: 2em;
+}
+
+.el-icon--3x {
+  font-size: 3em;
+}
+.el-icon--4x {
+  font-size: 4em;
+}
+.el-icon--5x {
+  font-size: 5em;
+}
+
+/* status */
+.el-icon--loading {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+.el-icon--waiting {
+  -webkit-animation: spin 2s infinite steps(8);
+  animation: spin 2s infinite steps(8);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
 
 
-.el-icon-glass:before {
+
+/* content */
+.el-icon--glass:before {
   content: "\f000";
 }
+
+.el-icon--spinner:before {
+  content: "\f110";
+}
+
 
 
 

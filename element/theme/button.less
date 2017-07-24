@@ -1,7 +1,55 @@
 @charset 'UTF-8';
 @import './common/var.less';
+@import './common/pre.less';
 
 .el-button {
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
   background: @--button-default-fill;
+  border: @--border-base;
+  border-color: @--button-default-border;
+  color: @--button-default-color;
+  -webkit-appearance: none;
+	text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  .user-select(none);
+  padding: @--button-defualt-padding;
+  border-radius: @--button-border-radius;
+
+  & + .el-button {
+    margin-left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: @--color-primary;
+    border-color: @--color-primary;
+  }
+
+  &:active {
+    color: @--button-active-color;
+    border-color: @--button-active-color;
+  }
+
+  &::-moz-focus-inner {
+	  border: 0
+  }
+  
+  & [class*=el-icon-]+span {
+	  margin-left: 5px
+  }
 }
 
+
+.is-disabled,
+.is-disabled:focus,
+.is-disabled:hover {
+	  color: #bfcbd9;
+	  cursor: not-allowed;
+	  background-image: none;
+	  background-color: #eef1f6;
+	  border-color: #d1dbe5
+}

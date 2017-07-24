@@ -1,7 +1,8 @@
 <template>
   <i :class="[
     type ? 'el-icon--' + type : '',
-    size ? 'el-icon--' + size : '',>
+    size ? 'el-icon--' + size : '' ,
+    status ? 'el-icon--' + status : '']">
   </i>
 </template> 
 
@@ -10,7 +11,8 @@ export default {
   name: 'ElIcon',
   props: {
     type: String,
-    size: String
+    size: String,
+    status: String
   }
 }
 </script>

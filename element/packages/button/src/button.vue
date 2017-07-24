@@ -1,5 +1,6 @@
 <template>
   <button class="el-button" 
+          @click="handleClick"
           :disabled="disabled" 
           :autofocus="autofocus" 
           :type="nativeType"
@@ -7,12 +8,10 @@
             type ? 'el-button--' + type : '',
             size ? 'el-button--' + size : '',
             {
-              'is-disabled': disabled,
-              'is-loading': loading,
-              'is-plain': plain
+              'is-disabled': disabled
             }
-          ]">
-    111
+          ]">     
+    <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template> 
 
@@ -33,6 +32,13 @@ export default {
     size: String,
     loading: Boolean,
     plain: Boolean
+  },
+
+  methods: {
+    handClick (evt) {
+      console.log(1)
+      this.$emit('click', evt)
+    }
   }
 }
 </script>
