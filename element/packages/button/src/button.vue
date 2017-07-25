@@ -35,8 +35,7 @@ export default {
   },
 
   methods: {
-    handClick (evt) {
-      console.log(1)
+    handleClick (evt) {
       this.$emit('click', evt)
     }
   }
